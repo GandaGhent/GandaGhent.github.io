@@ -929,6 +929,14 @@ textarea.w-select {
     left: auto;
     right: auto;
   }
+
+  .nav_right {
+    grid-column-gap: 0 !important;
+  }
+
+  .show_on_mobile {
+    display: flex !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
