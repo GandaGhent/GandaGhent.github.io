@@ -129,6 +129,11 @@ textarea {
   margin: 0;
 }
 
+.textarea-input {
+  height: 150px !important;
+  border-radius: 15px;
+}
+
 button {
   overflow: visible;
 }
@@ -8851,6 +8856,13 @@ textarea.w-select {
   margin-top: 20px;
 }
 
+.guide_flex {
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+  flex-wrap: wrap;
+}
+
 .gap-xsmall {
   grid-column-gap: var(
     --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_sizes---gap--xs-gap
@@ -9395,6 +9407,7 @@ textarea.w-select {
   margin-right: auto;
   font-family: Exo, sans-serif;
   display: block;
+  text-align: center;
 }
 
 .image-4 {
@@ -10950,10 +10963,6 @@ textarea.w-select {
     min-width: 30%;
     max-width: 30%;
     margin-top: 5px;
-  }
-
-  .image-3 {
-    min-width: 100%;
   }
 
   .image-5 {
