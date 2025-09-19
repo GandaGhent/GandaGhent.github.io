@@ -1039,5 +1039,16 @@
       src="./trustpilot-one-time-domain-verification-id_files/webflow.b2bf6af6.21e995d084cf1a50.js.download"
       type="text/javascript"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const trustpilot_invitation = {
+          recipientEmail: "john@gmail.com",
+          recipientName: "John",
+          referenceId: "Order_123",
+          source: "InvitationScript",
+        };
+        tp("createInvitation", trustpilot_invitation);
+      });
+    </script>
   </body>
 </html>
