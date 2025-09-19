@@ -10915,6 +10915,10 @@ textarea.w-select {
     );
   }
 
+  .input_field.inline-input.margin-bottom_xsmall {
+    margin-bottom: 1em !important;
+  }
+
   .button {
     white-space: nowrap;
   }
