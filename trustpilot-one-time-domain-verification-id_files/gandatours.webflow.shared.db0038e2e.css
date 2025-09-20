@@ -183,7 +183,7 @@ textarea {
 }
 
 .textarea-input {
-  height: 150px !important;
+  height: 130px !important;
   border-radius: 15px;
 }
 
@@ -11497,8 +11497,8 @@ textarea.w-select {
   }
 
   #w-node-_2eb957ac-a779-b7e8-c895-939eedaeea1f-edaeea0f.w-node-c37e494a-094a-a5a2-e6f9-277985131885-3e37d886 {
-  grid-area: 1 / 4 / 6 / 10;
-}
+    grid-area: 1 / 4 / 6 / 10;
+  }
 
   #w-node-_0f2ffcf0-84e8-5430-8c03-c5aa9b6ea86e-3e37d886 {
     grid-area: 4 / 2 / 7 / 8;
@@ -11558,10 +11558,8 @@ textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
-
-
   .overlay_opacity-middle.radius_card {
-    height : 100% !important;
+    height: 100% !important;
   }
 
   #w-node-ec71bbe4-4913-cc57-90df-0f36fc5b9fd8-3e37d88e {
