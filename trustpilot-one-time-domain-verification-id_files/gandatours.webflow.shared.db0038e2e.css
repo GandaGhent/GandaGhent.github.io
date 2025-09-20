@@ -11496,6 +11496,15 @@ textarea.w-select {
     grid-area: span 1 / span 5 / span 1 / span 5;
   }
 
+  #w-node-_2eb957ac-a779-b7e8-c895-939eedaeea1f-edaeea0f.w-node-c37e494a-094a-a5a2-e6f9-277985131885-3e37d886 {
+  grid-area: 1 / 4 / 6 / 10;
+}
+
+  #w-node-_0f2ffcf0-84e8-5430-8c03-c5aa9b6ea86e-3e37d886 {
+    grid-area: 4 / 2 / 7 / 8;
+    margin-bottom: 1em;
+  }
+
   #w-node-d0ef2e88-c688-4817-b67b-9012ac9836b1-bce4a1fb.w-node-a16f0cc4-4cc1-d6cb-30b4-3344ed0728e2-3e37d886,
   #w-node-d0ef2e88-c688-4817-b67b-9012ac9836b1-bce4a1fb.w-node-_8a68034e-be96-89ae-2843-aae2fc7b8573-3e37d886,
   #w-node-d0ef2e88-c688-4817-b67b-9012ac9836b1-bce4a1fb.w-node-c792a4b0-5504-9d6f-223e-256c7ac22b1d-3e37d886,
@@ -11549,6 +11558,12 @@ textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+
+
+  .overlay_opacity-middle.radius_card {
+    height : 100% !important;
+  }
+
   #w-node-ec71bbe4-4913-cc57-90df-0f36fc5b9fd8-3e37d88e {
     grid-column-start: 1;
   }
