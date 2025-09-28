@@ -295,6 +295,13 @@ pre {
   width: fit-content;
 }
 
+#profileUrl_bottom {
+  text-decoration: none !important;
+  align-items: end;
+  gap: 0.5em;
+  width: fit-content;
+}
+
 code,
 kbd,
 pre,
@@ -1216,6 +1223,10 @@ textarea.w-select {
     width: 100%;
   }
 
+  #profileUrl_bottom {
+    width: 20em;
+  }
+
   .tp-border {
     width: 100%;
   }
@@ -2060,6 +2071,11 @@ textarea.w-select {
 .w-richtext figure[data-rt-type="video"] {
   width: 60%;
   height: 0;
+}
+
+.footer-parag {
+  margin-bottom: 0px;
+  margin-block-end: 0px;
 }
 
 .w-richtext figure.w-richtext-figure-type-video iframe,
@@ -8288,6 +8304,7 @@ textarea.w-select {
   max-width: var(
     --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_sizes---container--container-width
   );
+  min-height: 4.7em !important;
   padding: var(
       --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_sizes---spacing--0-75x
     )
@@ -8348,6 +8365,10 @@ textarea.w-select {
   height: 2.5rem;
   text-decoration: none;
   display: flex;
+}
+
+.nav_logo > img {
+  max-width: 87px;
 }
 
 .nav_logo:hover {
@@ -9386,6 +9407,16 @@ textarea.w-select {
   display: flex;
 }
 
+.ln-flag {
+  max-width: 3.7em !important;
+}
+
+.ln-flag > img {
+  width: 1.8em !important;
+  min-width: none !important;
+  max-width: none !important;
+}
+
 .nav_menu-list-item {
   margin-bottom: 0;
   display: flex;
@@ -9624,7 +9655,6 @@ textarea.w-select {
   flex: 0 auto;
   order: 0;
   max-width: 10%;
-  margin-left: -83px;
 }
 
 .div-block {
@@ -9677,8 +9707,29 @@ textarea.w-select {
   display: block;
 }
 
+.contact_flex {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact_flex > div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  gap: 5em;
+}
+
+.contact_img {
+  width: 6em;
+}
+
 .div-block-3 {
   flex-flow: row;
+  display: flex;
+  justify-content: space-between;
 }
 
 .image-8 {
@@ -10264,6 +10315,10 @@ textarea.w-select {
     margin-bottom: 0;
   }
 
+  .contact_flex > div {
+    gap: 0.5em;
+  }
+
   .nav_dropdown-menu {
     width: 100%;
     height: auto;
@@ -10482,6 +10537,17 @@ textarea.w-select {
 
   .grid_2-col {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact_flex {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .contact_flex > div {
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
   }
 
   .grid_2-col.gap-small {
