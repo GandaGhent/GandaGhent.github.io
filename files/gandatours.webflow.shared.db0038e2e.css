@@ -872,6 +872,36 @@ textarea.w-select {
   display: block;
 }
 
+.TA_socialButtonRate {
+  width: 17.5rem !important;
+  height: 3.75rem !important;
+  padding-top: 0.8rem !important;
+  border-radius: 10px !important;
+  background-color: #00eb5b;
+}
+
+.tripadvisor_link {
+  text-decoration: none;
+}
+
+.TA_socialButtonRate div {
+  width: fit-content !important;
+  margin: auto;
+}
+
+.TA_socialButtonRate img {
+  width: 3rem !important;
+  float: none !important;
+  vertical-align: sub !important;
+}
+.TA_socialButtonRate .rateText {
+  font-size: 1.8rem !important;
+  float: none !important;
+  line-height: 30px !important;
+  color: black;
+  text-decoration: none !important;
+}
+
 .w-file-upload-default.w-hidden,
 .w-file-upload-uploading.w-hidden,
 .w-file-upload-error.w-hidden,
@@ -9719,7 +9749,11 @@ textarea.w-select {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  gap: 5em;
+  gap: 3em;
+}
+
+.logo_flex_nl {
+  gap: 1em !important;
 }
 
 .contact_img {
