@@ -37,6 +37,43 @@
       crossorigin="anonymous"
     />
     <script src="./files/webfont.js.download" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "jd5dmy6uiacV988xx",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("form-contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("form_submit_button").value =
+              "Please wait...";
+            emailjs.sendForm("service_t17adzb", "template_hafle7g", this).then(
+              () => {
+                document.getElementById("form_success-message").style.display =
+                  "block";
+                document.getElementById("form-contact-form").style.display =
+                  "none";
+              },
+              (error) => {
+                document.getElementById("form_failed-message").style.display =
+                  "block";
+                document.getElementById("form-contact-form").style.display =
+                  "none";
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
     <link rel="stylesheet" href="./files/css" media="all" />
     <script type="text/javascript">
       WebFont.load({
@@ -531,6 +568,19 @@
           </div>
         </div>
       </div>
+      <!--<div
+        class="container is-small leaflet-container"
+        onclick="downloadLeaflet()"
+      >
+        <h4 class="is-align-center">Have a look out our leaflet!</h4>
+        <div class="icon">
+          <img
+            src="./files/download-minimalistic-svgrepo-com.png"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+      </div>-->
     </section>
     <section class="section between">
       <div class="container">
@@ -553,15 +603,11 @@
           <h2 class="eyebrow margin-bottom_xsmall">Get in touch</h2>
           <h3 class="heading_h2">Plan your next city tour</h3>
         </div>
-        <div class="margin-bottom_none w-form">
+        <div class="margin-bottom_none">
           <form
-            method="get"
-            data-wf-element-id="dc2c0235-86c4-312e-66eb-f7fb2d7f0614"
             name="wf-form-Contact-Form-2"
             data-name="Contact Form"
-            id="wf-form-contact-form"
-            data-wf-page-id="68ac29751040bc6e3e37d886"
-            data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
+            id="form-contact-form"
             aria-label="Contact Form"
           >
             <div class="flex_horizontal is-wrap is-y-bottom gap-xsmall">
@@ -582,7 +628,7 @@
               <div class="div-block">
                 <select
                   id="select-dropdown-2"
-                  name="select-dropdown-2"
+                  name="type"
                   data-name="Select Dropdown 2"
                   class="input_field inline-input margin-bottom_xsmall w-select"
                 >
@@ -599,7 +645,7 @@
                 ><input
                   class="input_field inline-input margin-bottom_xsmall w-input"
                   maxlength="256"
-                  name="email-22"
+                  name="name"
                   data-name="Email 22"
                   placeholder="email@website.com"
                   type="email"
@@ -613,7 +659,7 @@
                 >Extra information</label
               ><textarea
                 class="textarea-input inline-input margin-bottom_xsmall w-input"
-                name="name-15"
+                name="message"
                 maxlength="3000"
                 data-name="name 15"
                 type="textarea"
@@ -626,10 +672,11 @@ Kind Regards"
               ></textarea>
             </div>
             <input
-              type="submit"
-              data-wait="Please wait..."
               class="button margin-top_small w-button"
               value="Send inquiry"
+              id="form_submit_button"
+              name="submit"
+              type="submit"
             />
             <div>
               <div>
@@ -660,7 +707,9 @@ Kind Regards"
             </div>
           </form>
           <div
-            class="form_success-message w-form-done"
+            id="form_success-message"
+            class="form_success-message"
+            style="display: none"
             tabindex="-1"
             role="region"
             aria-label="Contact Form success"
@@ -668,28 +717,70 @@ Kind Regards"
             <div>Thank you! We’ll contact you soon.</div>
           </div>
           <div
-            class="form_error-message w-form-fail"
+            id="form_failed-message"
+            class="form_success-message"
+            style="display: none"
             tabindex="-1"
             role="region"
-            aria-label="Contact Form failure"
+            aria-label="Contact Form success"
           >
-            <div class="form_error-message_content">
-              <img
-                width=""
-                height=""
-                alt="image of busy city street (for a pr firm)"
-                loading="lazy"
-                data-aisg-image-id="3dd3c32d-cb1d-4ccf-90d1-bf03860d4226"
-                class="display_inline-block"
-              />
-              <div class="display_inline-block">
-                Oops! Please check your info and try again.
-              </div>
-            </div>
+            <div>Oops! Something went wrong, please try again later</div>
           </div>
         </div>
       </div>
     </section>
+    <!--<section id="Price" class="section is-secondary">
+      <div class="container">
+        <div
+          id="w-node-_080ab5f1-a942-ec51-aefc-8743693e61aa-b79326a9"
+          class="header w-node-e198d2f8-4b02-1a7e-9738-704d3416cc76-3e37d886"
+        >
+          <div class="eyebrow">Prices</div>
+          <h2 class="heading_h2 small_heading">
+            Our prices for every kind of tour
+          </h2>
+        </div>
+       <div
+          id="w-node-_080ab5f1-a942-ec51-aefc-8743693e61b1-b79326a9"
+          class="w-layout-grid grid_2-col w-node-e198d2f8-4b02-1a7e-9738-704d3416cca5-3e37d886 container-small gap-small"
+        >
+          <div class="price-card">
+            <h3 class="heading_h4 no-font">Group (2-15 persons)</h3>
+            <div class="rich-text w-richtext price-info">
+              <p>105 euro</p>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="heading_h4 no-font">Group (15-30 persons)</h3>
+            <div class="rich-text w-richtext price-info">
+              <p>150 euro</p>
+            </div>
+          </div>
+
+          <div class="price-card">
+            <h3 class="heading_h4 no-font">Free walking tours</h3>
+            <div class="rich-text w-richtext price-info">
+              <p>Tip based</p>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="heading_h4 no-font">
+              Custom private tour<span> *</span>
+            </h3>
+            <div class="rich-text w-richtext price-info">
+              <p>175 euro</p>
+            </div>
+          </div>
+        </div>
+        <div class="price-notice">
+          <p>* custom private tour composed as wished (routes, stops, ...)</p>
+          <p>* added digestives not included in the price</p>
+          <p>
+            * an extra guide will be hired with groups bigger than 30 persons
+          </p>
+        </div>
+      </div>
+    </section>-->
     <section id="About" class="section is-inverse">
       <div class="container">
         <div class="header is-align-center div-block-3">
@@ -1318,7 +1409,8 @@ Kind Regards"
       src="./files/webflow.b2bf6af6.21e995d084cf1a50.js.download"
       type="text/javascript"
     ></script>
-    <script>
+
+    <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
         const trustpilot_invitation = {
           recipientEmail: "john@gmail.com",

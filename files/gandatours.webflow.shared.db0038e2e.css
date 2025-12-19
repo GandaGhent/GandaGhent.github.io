@@ -823,6 +823,20 @@ textarea.w-select {
   display: inline-block;
 }
 
+.leaflet-container {
+  margin-top: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.leaflet-container:hover {
+  color: rgba(23, 22, 22, 0.646);
+}
+
 .w-radio {
   margin-bottom: 5px;
   padding-left: 20px;
@@ -907,6 +921,68 @@ textarea.w-select {
 .w-file-upload-error.w-hidden,
 .w-file-upload-success.w-hidden {
   display: none;
+}
+
+.price-info {
+  padding: 1em;
+  padding-top: 0;
+  font-family: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_typography---font--heading-font
+  );
+}
+
+.price-info > p {
+  text-align: center;
+  font-size: 22px !important;
+}
+
+.no-gap {
+  gap: 0 !important;
+}
+
+.price-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1em;
+  border: 1px solid
+    var(
+      --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694---card--card-primary-border
+    );
+}
+
+.price-card > h3 {
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.6em;
+  border-radius: 3px;
+  border-bottom: solid black 1px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.price-notice {
+  color: red;
+  margin-top: 3em;
+}
+
+.price-notice > p {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.price-card > h3 > span {
+  color: red;
+}
+
+.container-small {
+  width: 70%;
+  margin: auto;
 }
 
 .w-file-upload-uploading-btn {
@@ -1239,6 +1315,19 @@ textarea.w-select {
 @media screen and (max-width: 479px) {
   #w-node-_0f2ffcf0-84e8-5430-8c03-c5aa9b6ea86e-3e37d886 {
     grid-area: 4 / 1 / 7 / 8 !important;
+  }
+
+  .container-small {
+    width: 100%;
+  }
+
+  .price-card {
+    padding: 0;
+    padding-top: 1em;
+  }
+
+  .price-card > h3 {
+    font-size: 20px;
   }
 
   #w-node-_2eb957ac-a779-b7e8-c895-939eedaeea1f-edaeea0f.w-node-c37e494a-094a-a5a2-e6f9-277985131885-3e37d886 {
@@ -3164,7 +3253,9 @@ textarea.w-select {
   );
   text-wrap: balance;
 }
-
+.small_heading {
+  font-size: 32px !important;
+}
 .heading_h1 {
   margin-bottom: var(
     --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_typography---h1-heading--h1-margin-bottom
@@ -5835,6 +5926,13 @@ textarea.w-select {
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: color-mix(in srgb, currentColor 30%, transparent);
+  align-self: stretch;
+}
+
+.divider-horizontal {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: color-mix(in srgb, currentColor 30%, transparent);
   align-self: stretch;
 }
 

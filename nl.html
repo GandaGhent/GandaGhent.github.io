@@ -56,6 +56,43 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "jd5dmy6uiacV988xx",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("form-contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("form_submit_button").value =
+              "Even geduld...";
+            emailjs.sendForm("service_t17adzb", "template_hafle7g", this).then(
+              () => {
+                document.getElementById("form_success-message").style.display =
+                  "block";
+                document.getElementById("form-contact-form").style.display =
+                  "none";
+              },
+              (error) => {
+                document.getElementById("form_failed-message").style.display =
+                  "block";
+                document.getElementById("form-contact-form").style.display =
+                  "none";
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
     <link href="./files\favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="./files\favicon.ico" rel="icon" type="image/x-icon" />
     <link
@@ -528,15 +565,11 @@
           <h2 class="eyebrow margin-bottom_xsmall">Contacteer ons</h2>
           <h3 class="heading_h2">Plan jouw volgende stadstour</h3>
         </div>
-        <div class="margin-bottom_none w-form">
+        <div class="margin-bottom_none">
           <form
-            method="get"
-            data-wf-element-id="dc2c0235-86c4-312e-66eb-f7fb2d7f0614"
             name="wf-form-Contact-Form-2"
             data-name="Contact Form"
-            id="wf-form-contact-form"
-            data-wf-page-id="68ac29751040bc6e3e37d886"
-            data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
+            id="form-contact-form"
             aria-label="Contact Form"
           >
             <div class="flex_horizontal is-wrap is-y-bottom gap-xsmall">
@@ -544,7 +577,7 @@
               <div class="div-block">
                 <select
                   id="select-dropdown-2"
-                  name="select-dropdown-2"
+                  name="type"
                   data-name="Select Dropdown 2"
                   class="input_field inline-input margin-bottom_xsmall w-select"
                 >
@@ -561,7 +594,7 @@
                 ><input
                   class="input_field inline-input margin-bottom_xsmall w-input"
                   maxlength="256"
-                  name="email-22"
+                  name="name"
                   data-name="Email 22"
                   placeholder="email@website.com"
                   type="email"
@@ -576,7 +609,7 @@
                 >Extra information</label
               ><textarea
                 class="textarea-input inline-input margin-bottom_xsmall w-input"
-                name="name-15"
+                name="message"
                 maxlength="3000"
                 data-name="name 15"
                 type="textarea"
@@ -590,6 +623,8 @@ Groetjes"
             </div>
             <input
               type="submit"
+              name="submit"
+              id="form_submit_button"
               data-wait="Even geduld..."
               class="button margin-top_small w-button"
               value="Verzend aanvraag"
@@ -624,7 +659,9 @@ Groetjes"
             </div>
           </form>
           <div
-            class="form_success-message w-form-done"
+            id="form_success-message"
+            class="form_success-message"
+            style="display: none"
             tabindex="-1"
             role="region"
             aria-label="Contact Form success"
@@ -632,25 +669,14 @@ Groetjes"
             <div>Dankuwel! We neem snel contact met jou op.</div>
           </div>
           <div
-            class="form_error-message w-form-fail"
+            id="form_failed-message"
+            class="form_success-message"
+            style="display: none"
             tabindex="-1"
             role="region"
-            aria-label="Contact Form failure"
+            aria-label="Contact Form success"
           >
-            <div class="form_error-message_content">
-              <img
-                width=""
-                height=""
-                alt="image of busy city street (for a pr firm)"
-                src="./files/68ac29e89c609d954f474b93_c20c4ad5-dddf-4475-b204-a50512f7831d.avif"
-                loading="lazy"
-                data-aisg-image-id="3dd3c32d-cb1d-4ccf-90d1-bf03860d4226"
-                class="display_inline-block"
-              />
-              <div class="display_inline-block">
-                Oeps! Controleer jouw info en probeer opnieuw.
-              </div>
-            </div>
+            <div>Oops! Something went wrong, please try again later</div>
           </div>
         </div>
       </div>
