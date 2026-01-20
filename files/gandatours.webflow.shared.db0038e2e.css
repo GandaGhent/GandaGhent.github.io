@@ -9959,7 +9959,8 @@ textarea.w-select {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  max-width: fit-content;
+  min-width: 170px;
+  max-width: 170px;
 }
 
 .image-9,
