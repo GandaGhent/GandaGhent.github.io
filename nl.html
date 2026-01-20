@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   data-wf-domain="www.gandatours.be"
   data-wf-page="68ac29751040bc6e3e37d886"
@@ -50,10 +50,10 @@
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
-        (n.className += t + "js"),
+        ((n.className += t + "js"),
           ("ontouchstart" in o ||
             (o.DocumentTouch && c instanceof DocumentTouch)) &&
-            (n.className += t + "touch");
+            (n.className += t + "touch"));
       })(window, document);
     </script>
     <script
@@ -88,7 +88,7 @@
                 document.getElementById("form-contact-form").style.display =
                   "none";
                 console.log("FAILED...", error);
-              }
+              },
             );
           });
       };
@@ -727,7 +727,18 @@ Groetjes"
             />
             <div class="text-block-2">Frituur Hendrik</div>
           </div>
+          <div class="div-block-5">
+            <img
+              src="./files/Temmerman.png"
+              loading="lazy"
+              sizes="(max-width: 1079px) 100vw, 1079px"
+              alt=""
+              class="image-8"
+            />
+            <div class="text-block-2">Temmerman</div>
+          </div>
         </div>
+
         <div
           data-duration-out="100"
           data-current="Tab 1"
