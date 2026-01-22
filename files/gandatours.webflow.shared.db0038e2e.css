@@ -9920,10 +9920,67 @@ textarea.w-select {
   width: 6em;
 }
 
+.container-card {
+  margin-bottom: 0;
+}
+
 .div-block-3 {
   flex-flow: row;
   display: flex;
   justify-content: space-between;
+}
+
+.info-button {
+  font-size: 2em;
+  height: 1.6em;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  padding: 0.4em;
+  font-family: var(
+    --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_typography---font--heading-font
+  );
+}
+
+.lovetour_dates {
+  width: fit-content;
+  padding: 1em 4em;
+  height: 22.2em;
+  width: 29rem;
+}
+
+.lovetour_dates_nl {
+  padding: 1em 6em;
+}
+
+.lovetour_dates p {
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.lovedates-last {
+  font-weight: bold;
+  margin: auto;
+  width: fit-content;
+}
+
+.lovetour_dates h2 {
+  font-size: 2em;
+}
+
+.lovetour_dates div {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1em;
+}
+
+.lovetour_img {
+  width: 29rem;
+}
+
+.lovetour_img div {
+  padding: 0;
 }
 
 .image-8 {
