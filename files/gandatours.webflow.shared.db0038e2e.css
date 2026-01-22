@@ -5869,6 +5869,11 @@ textarea.w-select {
   );
 }
 
+.lovedates-last img {
+  width: 1.5em;
+  margin-bottom: 0.3em;
+}
+
 .icon {
   width: var(
     --ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1756113270694_sizes---spacing--2x
