@@ -9950,7 +9950,7 @@ textarea.w-select {
 .lovetour_dates {
   width: fit-content;
   padding: 1em 4em;
-  height: 22.2em;
+  height: 20em;
   width: 29rem;
 }
 
@@ -9967,6 +9967,10 @@ textarea.w-select {
   font-weight: bold;
   margin: auto;
   width: fit-content;
+}
+
+.card_image {
+  height: 20em;
 }
 
 .lovetour_dates h2 {
