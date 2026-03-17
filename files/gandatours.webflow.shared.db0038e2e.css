@@ -8666,6 +8666,11 @@ textarea.w-select {
   display: inline-flex;
 }
 
+.bigger_icon {
+  width: 1.3em;
+  margin-bottom: 0.15em;
+}
+
 .image {
   object-fit: contain;
   width: 100%;
