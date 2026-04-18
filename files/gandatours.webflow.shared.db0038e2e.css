@@ -9972,6 +9972,11 @@ textarea.w-select {
   font-weight: bold;
   margin: auto;
   width: fit-content;
+  margin-top: 1.5em;
+}
+
+.lovedates-header {
+  margin-bottom: 1.5em;
 }
 
 .card_image {
@@ -9987,6 +9992,7 @@ textarea.w-select {
   justify-content: space-between;
   align-items: start;
   gap: 1em;
+  font-size: 1.15em;
 }
 
 .lovetour_img {
