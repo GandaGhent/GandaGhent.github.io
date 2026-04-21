@@ -9932,6 +9932,11 @@ textarea.w-select {
 
 .container-card {
   margin-bottom: 0;
+  text-align: center;
+}
+
+.container-card .heading_h2 {
+  margin: auto;
 }
 
 .div-block-3 {
