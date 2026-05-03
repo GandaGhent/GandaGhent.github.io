@@ -1101,6 +1101,10 @@ textarea.w-select {
   margin-right: 0;
 }
 
+.link_top > div {
+  width: 18.2rem !important;
+}
+
 .w-col {
   float: left;
   width: 100%;
