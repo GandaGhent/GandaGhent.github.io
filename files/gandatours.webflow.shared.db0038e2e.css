@@ -5882,6 +5882,11 @@ textarea.w-select {
   margin-bottom: 0.3em;
 }
 
+.texturedates-last img {
+  width: 1.5em;
+  margin-bottom: 0.3em;
+}
+
 .nightdates-last img {
   width: 1.5em;
 }
@@ -9990,7 +9995,13 @@ textarea.w-select {
   font-weight: bold;
   margin: auto;
   width: fit-content;
-  margin-top: 1.5em;
+}
+
+.texturedates-last {
+  font-weight: bold;
+  margin: auto;
+  width: fit-content;
+  margin-top: 2.5em;
 }
 
 .nightdates-last {
@@ -10002,6 +10013,15 @@ textarea.w-select {
 
 .lovedates-header {
   margin-bottom: 1.5em;
+}
+
+.bigdates {
+  font-size: 1.8em !important;
+  font-weight: 600;
+}
+
+.texturedates-header {
+  margin-bottom: 2em;
 }
 
 .card_image {
