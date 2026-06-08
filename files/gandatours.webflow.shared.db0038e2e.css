@@ -1327,6 +1327,10 @@ textarea.w-select {
     padding: 0 2em !important;
   }
 
+  .TA_socialButtonRate {
+    width: 100% !important;
+  }
+
   .container-small {
     width: 100%;
   }
@@ -10025,7 +10029,8 @@ textarea.w-select {
 }
 
 .card_image {
-  height: 20em;
+  height: 100%;
+  max-height: 20em;
 }
 
 .lovetour_dates h2 {
